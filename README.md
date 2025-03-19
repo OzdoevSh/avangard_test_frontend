@@ -1,4 +1,4 @@
-# Flexim Test Task Frontend
+# Avangard Test Task Frontend
 
 ## **Getting Started**
 
