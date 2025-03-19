@@ -25,10 +25,11 @@ function Auth({ setIsAuthenticated }: AuthProps) {
   const handleRegister = async (values: { email: string; password: string }) => {
     try {
       await register(values).unwrap();
-      message.success('Registration successful!');
+      message.success('Регистрация прошла успешно! Залогиньтесь!');
+      form.resetFields();
     } catch (error) {
       console.error(error);
-      message.error('Registration failed. Please try again.');
+      message.error('Ошибка регистрации!');
     }
   };
 
@@ -41,7 +42,7 @@ function Auth({ setIsAuthenticated }: AuthProps) {
       navigate('/');
     } catch (error) {
       console.error(error);
-      message.error('Login failed. Please check your credentials.');
+      message.error('Ошибка при попытке входа!');
     }
   };
 
